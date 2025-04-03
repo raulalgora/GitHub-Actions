@@ -1,6 +1,17 @@
 name: First_action_raul
 on:
   workflow_dispatch:
+    inputs:
+      debug_mode:
+        type: boolean
+        description: Enable debug mode
+        default: false
+        required: false
+      sample_value:
+        type: string
+        description: Sample value
+        default: ""
+        required: false
 
 jobs:
   hello-world:
