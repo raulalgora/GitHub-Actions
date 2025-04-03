@@ -26,4 +26,4 @@ jobs:
     needs: hello-world
     steps:
       - name: Bye Step
-        run: echo "bye world!"
+        run: echo ${{ github.event.inputs.debug_mode }}
