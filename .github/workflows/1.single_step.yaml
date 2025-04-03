@@ -8,3 +8,10 @@ jobs:
     steps:
       - name: Hello Step
         run: echo "Hello world!"
+
+jobs:
+  bye-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bye Step
+        run: echo "bye world!"
