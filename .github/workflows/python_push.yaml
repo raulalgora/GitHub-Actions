@@ -1,0 +1,17 @@
+name: run_python
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+        name: Run security check
+        run: bandit -r code/python
+        
