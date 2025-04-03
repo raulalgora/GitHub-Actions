@@ -19,4 +19,3 @@ jobs:
         
         name: Run security check
         run: bandit -r code/python
-        
