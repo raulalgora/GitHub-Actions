@@ -2,7 +2,7 @@ name: second_raul
 on:
   push:
     branches:
-      - 'feature*'
+      - '*'
   workflow_dispatch:
     inputs:
       debug_mode:
