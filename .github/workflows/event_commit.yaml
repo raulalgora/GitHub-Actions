@@ -1,0 +1,32 @@
+name: First_action_raul
+on:
+  push:
+    branches:
+      - 'feature*'
+
+  workflow_dispatch:
+    inputs:
+      debug_mode:
+        type: boolean
+        description: Enable debug mode
+        default: false
+        required: false
+      sample_value:
+        type: string
+        description: Sample value
+        default: ""
+        required: false
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Step
+        run: echo "Hello world!"
+
+
+  bye-world:
+    runs-on: ubuntu-latest
+    needs: hello-world
+    steps:
+      - name: Bye Step
+        run: echo ${{ github.event.inputs.debug_mode }}
