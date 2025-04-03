@@ -1,12 +1,10 @@
-name: first action -single
-
+name: First_action_raul
 on:
   workflow_dispatch:
 
 jobs:
-hello-world:
-  runs-on: ubuntu-latest
-  
-  steps:
-    - name: First step
-      run: echo "Hello world"
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Step
+        run: echo "Hello world!"
