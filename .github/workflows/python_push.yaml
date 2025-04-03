@@ -1,7 +1,8 @@
 name: run-python
 on:
   push:
-  workflow_dispatch:
+    branches:
+      - '*'
 jobs:
   run-python:
     runs-on: ubuntu-latest
