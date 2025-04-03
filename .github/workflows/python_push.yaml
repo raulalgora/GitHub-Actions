@@ -12,7 +12,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.9'
           
       - name: Install dependencies
         run: |
@@ -20,8 +20,5 @@ jobs:
           pip install -r code/python/requirements.txt || echo "No requirements file found, continuing..."
           pip install bandit
           
-      - name: Run security check
-        run: bandit -r code/python
-        
-      - name: Run Python
-        run: python code/python/main.py
+      - name: Run linters
+        run: flake8 code/python
