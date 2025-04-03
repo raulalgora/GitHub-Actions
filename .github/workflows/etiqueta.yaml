@@ -1,0 +1,12 @@
+name: tfo_raul
+on:
+  label:
+    types: [created]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hello Step
+        run: echo "Hello world!"
