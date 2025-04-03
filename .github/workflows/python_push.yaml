@@ -24,3 +24,4 @@ jobs:
         
       - name: Run Python
         run: python code/python/main.py
+        
